@@ -1,0 +1,27 @@
+
+import java.lang.Math;
+public class Bhakara1{
+    // delta = bÂ²-4.a.c:
+public static double calculateDelta(double b, double a, double c){
+    double delta= Math.pow(b, 2) - 4 * a * c;
+    return delta;
+}
+public static double [] calculateXs(double b, double a, double delta){
+    double[] xs = new double[2];
+    double x1 = (-b + Math.sqrt(delta)) / 2 * a;
+    double x2 = (-b - Math.sqrt(delta)) / 2 * a;
+    xs[0] = x1;
+    xs[1] = x2;
+    
+    return xs;
+    }
+public static void main(String[]args){
+    double delta = calculateDelta(-1,-1 .6);
+    System.out.println(delta);
+    double[] xs = calculateXs(-1, 1, delta);
+    
+    for (int i = 0; i < xs.length; i++){
+        System.out.println(xs[i]);
+        }
+    }
+}
